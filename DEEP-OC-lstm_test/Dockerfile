@@ -13,13 +13,13 @@
 # input args are defined inside the Jenkinsfile, not here!
 #
 
-ARG tag=2.2.0-py3-gpu
+ARG tag=2.0.0-cpu
 
 # Base image, e.g. tensorflow/tensorflow:1.14.0-py3
 FROM tensorflow/tensorflow:${tag}
 
-LABEL maintainer='Lara Lloret'
-LABEL version='0.0.01'
+LABEL maintainer='Lara'
+LABEL version='0.0.1'
 # LSTM test
 
 # What user branch to clone [!]
@@ -109,7 +109,7 @@ RUN if [ "$jlab" = true ]; then \
     else echo "[INFO] Skip JupyterLab installation!"; fi
 
 # Install user app:
-RUN git clone -b $branch https://github.com/deephdc/lstm_test && \
+RUN git clone -b $branch https://github.com/laramaktub/lstm_test && \
     cd  lstm_test && \
     pip install --no-cache-dir -e . && \
     rm -rf /root/.cache/pip/* && \

@@ -8,9 +8,9 @@ pipeline {
     }
 
     environment {
-        dockerhub_repo = "deephdc/deep-oc-lstm_test"
-        base_cpu_tag = "2.2.0-py3-gpu"
-        base_gpu_tag = "1.14.0-gpu-py3"
+        dockerhub_repo = "laramaktub/deep-oc-lstm_test"
+        base_cpu_tag = "2.0.0-cpu"
+        base_gpu_tag = "2.0.0-gpu"
     }
 
     stages {

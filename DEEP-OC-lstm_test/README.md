@@ -4,9 +4,9 @@
 
 # DEEP-OC-lstm_test
 
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-lstm_test/test)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-lstm_test/job/test)
+[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-lstm_test/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-lstm_test/job/master)
 
-This is a container that will run [lstm_test](https://github.com/deephdc/lstm_test) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
+This is a container that will run [lstm_test](https://github.com/laramaktub/lstm_test) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
 
     
 ## Running the container
@@ -17,11 +17,11 @@ To run the Docker container directly from Docker Hub and start using the API
 simply run the following command:
 
 ```bash
-$ docker run -ti -p 5000:5000 -p 6006:6006 deephdc/deep-oc-lstm_test
+$ docker run -ti -p 5000:5000 -p 6006:6006 laramaktub/deep-oc-lstm_test
 ```
 
 This command will pull the Docker container from the Docker Hub
-[deephdc](https://hub.docker.com/u/deephdc/) repository and start the default command (deepaas-run --listen-ip=0.0.0.0).
+[laramaktub](https://hub.docker.com/u/laramaktub/) repository and start the default command (deepaas-run --listen-ip=0.0.0.0).
 
 **N.B.** For either CPU-based or GPU-based images you can also use [udocker](https://github.com/indigo-dc/udocker).
 
@@ -49,21 +49,21 @@ Building the container:
 1. Get the `DEEP-OC-lstm_test` repository (this repo):
 
     ```bash
-    $ git clone https://github.com/deephdc/DEEP-OC-lstm_test
+    $ git clone https://github.com/laramaktub/DEEP-OC-lstm_test
     ```
 
 2. Build the container:
 
     ```bash
     $ cd DEEP-OC-lstm_test
-    $ docker build -t deephdc/deep-oc-lstm_test .
+    $ docker build -t laramaktub/deep-oc-lstm_test .
     ```
 
 3. Run the container (if you enable JupyterLab during the build, `--build-arg jlab=true`, 
 you should also add port 8888, i.e. `-p 8888:8888`):
 
     ```bash
-    $ docker run -ti -p 5000:5000 -p 6006:6006 deephdc/deep-oc-lstm_test
+    $ docker run -ti -p 5000:5000 -p 6006:6006 laramaktub/deep-oc-lstm_test
     ```
 
 These three steps will download the repository from GitHub and will build the
